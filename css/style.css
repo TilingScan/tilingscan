@@ -1,0 +1,373 @@
+/* 
+ * TilingScan App
+ * 
+ * @author Jose Miguel Juanes.
+ * @website http://www.jmjuanes.com.es
+ *
+ */
+
+
+/* Body
+========================================================================== */
+
+body { margin: 0px; padding: 0px; font-size: 20px; font-weight: normal; } 
+body { font-family: OpenSans; color: #373f49; background-color: #ffffff; } 
+
+
+/* General
+========================================================================== */
+
+/* Estilo de texto */
+.h1 { color: #373f49; font-size: 60px; } 
+.h2 { color: #373f49; font-size: 30px; } 
+.h3 { color: #373f49; font-size: 25px; } 
+.h4 { color: #373f49; font-size: 20px; } 
+
+/* Div principal */
+.main { width: 950px; margin-left: auto; margin-right: auto; } 
+
+/* Small */
+small { font-size: 15px; color: #96a4a5; } 
+
+
+/* Colores
+========================================================================== */
+
+/* Colors used in minim.css (jmjuanes.github.io/minim.css/) */
+
+/* Violeta */
+.background-purple { background-color: #9a57b4; } 
+.color-purple { color: #9a57b4; } 
+
+/* Verde */
+.background-green  { background-color: #2dcc70; } 
+.color-green  { color: #2dcc70; } 
+ 
+ /* Azul */
+.background-blue   { background-color: #00a5ff; } 
+.color-blue   { color: #00a5ff; } 
+
+/* Amarillo */
+.background-yellow { background-color: #f2c311; } 
+.color-yellow { color: #f2c311; } 
+
+/* Naranja */
+.background-orange { background-color: #e77e23; } 
+.color-orange { color: #e77e23; } 
+
+/* Rojo */
+.background-red    { background-color: #e94c3d; } 
+.color-red    { color: #e94c3d; } 
+
+/* Aguamarina */
+.background-water  { background-color: #1bbc9b; } 
+.color-water  { color: #1bbc9b; } 
+
+/* Gris */
+.background-grey   { background-color: #eeeff3; } 
+.color-grey   { color: #eeeff3; } 
+
+/* Gris oscuro */
+.background-bgrey  { background-color: #96a4a5; } 
+.color-bgrey  { color: #96a4a5; } 
+
+/* Negro */
+.background-black  { background-color: #373f49; } 
+.color-black  { color: #373f49; } 
+
+/* Blanco */
+.background-white  { background-color: #ffffff; } 
+.color-white  { color: #ffffff; } 
+
+/* Logo
+========================================================================== */
+
+/* Dimension */
+.logo { width: 45px; height: 45px; display: inline-block; border: 0px; } 
+.logo { float: left; } 
+
+/* Posicion */
+.logo { position: relative; top: 25px; left: 0px; } 
+
+/* Imagen */
+.logo { background-image: url('../img/logo/logo_blanco.png'); } 
+.logo { background-size: 45px 45px; background-repeat: no-repeat; } 
+
+
+/* Nav Bar
+========================================================================== */
+
+/* Barra navegacion */
+.nav { width: 100%; height: 100px; display: block; }
+.nav { background-color: #394c81; line-height: 47px; } 
+
+/* Grid */
+.nav-grid { width: 950px; height: 100px; display: block; } 
+.nav-grid { margin-left: auto; margin-right: auto; }  
+
+/* Text */
+.nav-text { color: #ffffff; font-size: 20px; text-decoration: none; } 
+.nav-text { margin: 15px; opacity: 0.6; margin-top: 22px; } 
+
+.nav-text:hover { opacity: 1.0; } 
+
+/* Logo Dimension */
+.nav-logo { width: 45px; height: 45px; display: inline-block; border: 0px; } 
+.nav-logo { float: left; } 
+
+/* Logo Posicion */
+.nav-logo { position: relative; top: 25px; left: 0px; } 
+
+/* Logo Imagen */
+.nav-logo { background-image: url('../img/logo/logo_blanco.png'); } 
+.nav-logo { background-size: 45px 45px; background-repeat: no-repeat; } 
+
+/* Logotipo */
+.nav-logotipo { top: 22px; left: 10px; text-align: left; color: #ffffff; } 
+.nav-logotipo { position: relative; float: left; font-size: 35px; } 
+.nav-logotipo { text-decoration: none; } 
+
+/* Boton de la app */
+.nav-btn { width: 130px; height: 50px; display: inline-block; } 
+.nav-btn { text-decoration: none; text-align: center; } 
+.nav-btn { font-size: 20px; color: #ffffff; background-color: transparent; } 
+.nav-btn { border-width: 2px; border-color: #ffffff; border-style: solid; }
+.nav-btn { margin-top: 22px; margin-left: 15px; opacity: 0.5; } 
+
+.nav-btn:hover { color: #373f49; background-color: #ffffff; opacity: 1.0; }  
+
+
+/* Foot
+========================================================================== */
+
+/* Dimension del pie */
+.foot { width: 950px; margin-left: auto; margin-right: auto; } 
+.foot { background-color: #ffffff; } 
+
+/* Barra de arriba */
+.foot { border-top-color: #dee2e2; border-top-style: solid; } 
+.foot { border-top-width: 1px; } 
+
+/* Texto del pie */
+.foot { font-size: 16px; color: #96a4a5; text-decoration: none; } 
+
+/* Para enlaces */
+.foot-text { color: #96a4a5; text-decoration: none; } 
+
+/* Enlace universidad */
+.foot-uv { color: #96a4a5; text-decoration: none; font-weight: bold; } 
+.foot-uv { font-size: 18px; } 
+
+/* Logo dimension*/
+.foot-logo { width: 155px; height: 35px; display: block; } 
+
+/* Logo texto */
+.foot-logo { font-size: 25px; color: #394c81; line-height: 35px; } 
+.foot-logo { text-decoration: none; text-align: right; } 
+.foot-logo { font-weight: bold; } 
+
+/* Logo margen */
+.foot-logo { margin: 20px; } 
+
+/* Logo imagen */
+.foot-logo { background-image: url('../img/logo/logo.png'); } 
+.foot-logo { background-repeat: no-repeat; background-size: 35px 35px; } 
+.foot-logo { background-position: left; } 
+
+/* Bloques de enlaces */
+.foot-block { color: #96a4a5; font-size: 16px; text-decoration: none; } 
+.foot-block { margin: 15px; } 
+
+
+/* Presentacion
+========================================================================== */
+
+/* Dimension de la presentacion */
+.pre { width: 100%; } 
+
+/* Dimension del texto */
+.pre-h1 { font-size: 60px; color: #373f49; } 
+.pre-h2 { font-size: 30px; color: #373f49; } 
+
+/* Boton */
+.pre-btn { width: 350px; height: 60px; border-width: 2px; border-color: #00a5ff; } 
+.pre-btn { border-style: solid; background-color: #00a5ff; font-size: 25px; } 
+.pre-btn { color: #ffffff; display: inline-block; line-height: 56px; } 
+.pre-btn { text-decoration: none; text-align: center; position: relative; } 
+
+.pre-btn:hover { color: #00a5ff; background-color: transparent; } 
+
+/* Logo */
+.pre-logo { width: 150px; height: 150px; display: block; border: 0px; } 
+.pre-logo { background-image: url('../img/logo/logo_circ.png'); } 
+.pre-logo { background-size: 150px 150px; background-repeat: no-repeat; } 
+
+
+/* Tabla
+========================================================================== */
+
+/* Contenedor */
+.table { display: table; width: 950px; } 
+.table { margin-left: auto; margin-right: auto; } 
+
+/* Celda */
+.table-cell { display: table-cell; padding: 20px; text-align: center; } 
+
+/* Boton */
+.table-btn { width: 300px; height: 60px; font-size: 25px; } 
+.table-btn { color: #ffffff; display: inline-block; line-height: 56px; } 
+.table-btn { text-decoration: none; text-align: center; position: relative; } 
+.table-btn { opacity: 1.0; } 
+
+/* Boton hover */
+.table-btn:hover { opacity: 0.8; } 
+
+
+/* Tutorial
+========================================================================== */
+
+/* Elemento del tutorial */
+.tutorial-item { width: 910px; min-height: 50px; background-color: #f0f0f0; } 
+.tutorial-item { font-size: 25px; line-height: 45px; } 
+.tutorial-item { display: block; font-weight: bold; margin-bottom: 20px; } 
+.tutorial-item { padding-left: 20px; padding-bottom: 10px; } 
+.tutorial-item { padding-right: 20px; padding-top: 10px; } 
+
+/* Titulo de cada seccion */
+.tutorial-title { cursor: pointer; } 
+
+/* Contenido del elemento */
+.tutorial-cont { width: 890px; min-height: 50px; background-color: #ffffff; }
+.tutorial-cont { font-size: 20px; line-height: 30px; font-weight: normal; } 
+.tutorial-cont { padding: 10px; display: none; } 
+
+/* Seccion */
+.tutorial-sec { font-size: 25px; }
+
+/* Boton para cerrar */
+.tutorial-close { display: block; width: 890px; height: 30px; } 
+.tutorial-close { text-align: center; color: #ffffff; cursor: pointer; } 
+.tutorial-close { line-height: 30px; font-size: 20px; } 
+.tutorial-close { background-color: #ababab; } 
+
+/* Al poner encima el raton */
+.tutorial-close:hover { background-color: #e94c3d; } 
+
+
+/* Input
+========================================================================== */
+
+/* Estilo general del input */
+.input, .input-500 { border-color: #96a4a5; border-width: 2px; } 
+.input, .input-500 { border-style: solid; } 
+.input, .input-500 { padding-bottom: 6px; padding-left: 12px; } 
+.input, .input-500 { padding-right: 12px; padding-top: 6px; } 
+.input, .input-500 { font-size: 19px; color: #373f49; height: 40px; } 
+.input, .input-500 { text-align: start; font-family: OpenSans; } 
+.input, .input-500 { background-color: #FFFFFF; text-align: center; } 
+
+/* Input margin */
+.input, .input-500 { margin-top: 10px; margin-bottom: 10px; }
+
+/* Dimension de 500px */
+.input-500 { width: 500px; } 
+
+
+/* Formulario
+========================================================================== */
+
+/* Dimension del formulario */
+.form { width: 900px; display: block; } 
+
+/* Estilo del formulario */
+.form { border-color: #ededed; border-style: solid; border-width: 1px; } 
+
+/* Padding del formulario */
+.form { padding: 25px; } 
+
+/* Boton del formulario */
+.form-btn { width: 250px; height: 50px; display: inline-block; margin: 5px; } 
+.form-btn { color: #ffffff; text-align: center; font-size: 20px; border: 0px; } 
+.form-btn { text-decoration: none; line-height: 43px; opacity: 1.0; } 
+.form-btn { font-family: OpenSans; } 
+
+/* Al pulsar encima */
+.form-btn:hover { opacity: 0.8; } 
+
+
+/* Select
+========================================================================== */
+
+/* Dimension */
+.select { height: 40px; } 
+
+/* Color */
+.select { background-color: #ffffff; border-color: #96a4a5; color: #000000; } 
+
+/* Margen */
+.select { margin-top: 10px; margin-bottom: 10px; } 
+
+/* Padding */
+.select { padding-bottom: 6px; padding-left: 12px; } 
+.select { padding-right: 12px; padding-top: 6px; } 
+
+/* Texto */
+.select { text-align: start; font-size: 19px;} 
+
+/* Borde */
+.select { border-color: #96a4a5; border-width: 2px; border-style: solid; } 
+
+
+/* Botones del dashboard
+========================================================================== */
+
+/* Dimension */
+.dashboard-btn { width: 300px; height: 100px; display: inline-block; } 
+
+/* Margen */
+.dashboard-btn { margin: 5px; } 
+
+/* Texto del boton */
+.dashboard-btn { text-decoration: none; line-height: 100px; font-size: 25px; }
+.dashboard-btn { color: #ffffff; } 
+
+/* Opacidad */
+.dashboard-btn { opacity: 1.0; } 
+.dashboard-btn:hover { opacity: 0.8; } 
+
+
+/* Search
+========================================================================== */
+
+/* Boton de busqueda */
+.search-btn { width: 150px; height: 40px; display: inline-block; border: 0px; } 
+.search-btn { margin: 5px; font-size: 15px; color: #ffffff; }
+.search-btn { background-color: #00a5ff; font-family: OpenSans; } 
+
+/* Margen del boton */
+.search-btn { margin-top: 10px; margin-bottom: 10px; } 
+
+/* Titulo de los resultados */
+.search-resul { font-size: 30px; color: #1c6496; text-decoration: none; }
+.search-resul { font-weight: bold; } 
+
+/* Informacion de cada resultado */
+.search-info { font-size: 20px; color: #373f49; text-decoration: none;} 
+
+
+/* Alert
+========================================================================== */
+
+/* Dimension del alert */
+.alert { width: 900px; display: block; } 
+
+/* Texto */
+.alert { color: #ffffff; font-size: 16px; text-align: center; } 
+.alert { font-weight: normal; text-decoration: none; font-family: OpenSans; } 
+
+/* Padding */
+.alert { padding: 10px; } 
+
+
+
+

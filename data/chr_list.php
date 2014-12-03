@@ -1,0 +1,1 @@
+<?php $chr_list = array(); $chr_list[0] = "1"; $chr_list[1] = "2"; $chr_list[2] = "3"; ?>

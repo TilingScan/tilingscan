@@ -1,0 +1,1 @@
+<?php $p_date = "Tuesday 13th of May 2014 09:07:50 PM"; $p_title = "Demo project"; $p_autor = "Admin"; ?> 
