@@ -15,7 +15,7 @@
 	<a href="./tutorial" class="foot-block">Tutorial</a>
 	<a href="./support" class="foot-block">Support</a>
 	<a href="./dashboard" class="foot-block">Dashboard</a>
-	<a href="http://www.jmjuanes.es/annotate" class="foot-block" target="_blank">Annotate!</a>
+	<a href="https://tilingscan.github.io/annotate" class="foot-block" target="_blank">Annotate!</a>
 	<a href="https://github.com/TilingScan" class="foot-block" target="_blank">GitHub</a>
 	
 	<!-- Espacios -->

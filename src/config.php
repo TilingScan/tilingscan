@@ -62,6 +62,6 @@
 	$p_strand = true;
 	
 	//Localizacion de Annotate
-	define('_ANNOTATE_URL', 'http://www.jmjuanes.es/annotate/app.html');
+	define('_ANNOTATE_URL', 'https://tilingscan.github.io/annotate/app.html');
 	
 ?>
