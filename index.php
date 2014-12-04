@@ -25,8 +25,8 @@
 			<br><br>
 			
 			<!-- Texto -->
-			<span class="pre-h1">Analyze Tiling Array results Online.</span><br>
-			<span class="pre-h2">An application for the identification of differentially expressed <br>DNA regions in Tiling microarray data.</span>
+			<span class="pre-h1">Analyze Tiling Array results online.</span><br>
+			<span class="pre-h2">An application for the identification of differentially expressed <br>DNA regions in Tiling Microarray data.</span>
 			
 			<!-- Espacios -->
 			<br><br><br>
