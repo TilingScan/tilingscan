@@ -107,10 +107,11 @@
 						<li><b>Project title</b>: this will help you to differentiate projects.</li>
 						<li><b>Project author</b>: your name.</li>
 						<li><b>Annotation file</b>: File containing the genome annotation of the organism of study <span class="color-red">(See data formats)</span>.</li>
+						<li><b>Experiment type</b>: You can select your experiment type by providing strand-specific (e.g. GRO data) or non-strand specific data (e.g. ChIP-on-chip data).</li>
 						<li><b>Experimental data files</b> <span class="color-red">(See data formats)</span>:<br>
 							<ul>
-								<li><b>Forward file</b>: file with expression of the Forward (Plus,Watson) strand.</li>
-								<li><b>Reverse file</b>: file with expression of the Reverse (Minus,Crick) strand.</li>
+								<li><b>Forward file</b>: file with expression of the Forward (Plus, Watson) strand.</li>
+								<li><b>Reverse file</b>: file with expression of the Reverse (Minus, Crick) strand.</li>
 							</ul>
 						</li>	
 					</ul>
@@ -141,6 +142,7 @@
 				<div class="tutorial-cont" id="6">
 					
 					<b class="tutorial-sec">Annotation file</b><br>
+					GFF stands for 'general feature format' or 'gene finding format'; it is a tab-delimited file with 9 columns. There are several types of GFF files that use incompatible syntax. The original GFF format is GFF1. A variant called GTF is also used. GFF3 has been proposed to extend on GFF and to constrain the specification more tightly to avoid mutually-incompatible versions of GFF.<br><br>
 					The annotation file must be an <b>.gff</b> (Generic Feature Format Version 3 , GFF3) file.<br>
 					Please see <a href="http://www.sequenceontology.org/resources/gff3.html" target="_blank">http://www.sequenceontology.org/resources/gff3.html</a> 
 					for a detailed description of the Generic Feature Format (GFF).
