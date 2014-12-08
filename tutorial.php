@@ -148,30 +148,18 @@
 					<br><br>
 					
 					<b class="tutorial-sec">Experimental files</b><br>
-					The experimental files (Forward and reverse) are tabulated files which are organized as follows:<br><br>
+					To upload you data files, create a tabulated text file (.txt) containing the following information::<br><br>
 					<div align="center"><img src="img/tutorial/12.png" border="0"></div><br>
 					
 					<ul>
-						<li><b>Head</b>: the head must have 7 rows (or lines). TilingScan skips the content of these lines.</li>
-						<li><b>Sequence</b>: you need this structure for every sequence that you have:
-						<ul>
-							<li><b>Sequence head</b>: the sequence head block consists in:
-							<ul>
-								<li><b>Space row</b>: a blank row.</li>
-								<li><b>Sequence ID</b>: the ID of this sequence.</li>
-								<li><b>Name</b>: name of the sequence.</li>
-								<li><b>Number of hits</b>: number of probes for this sequence.</li>
-								<li><b>Another space row</b>.</li>
-							</ul>
-							<li><b>Sequence content:</b> the sequence content block consists in two columns:
-							<ul>
-								<li><b>Column 1</b>: position in nucleotides.</li>
-								<li><b>Column 2</b>: expression of these positions.</li>
-							</ul>
-							Note that the number of rows for the two columns must be the <b>Number of hits</b> that you have set in the <b>Sequence head</b>.</li>
-						</ul></li> 
+						<li>Line 1: <b>"# Sequence [tabulation] sequence number (optional)"</b>. You just have to write the word sequence for the program to start reading your data. The sequence number is optional.</li>
+						<li>Line 2: <b>"# Name [tabulation] chr number"</b>. This will identify the chromosome the probes contain information for.</li>
+						<li>Line 3: <b>"#Numer of hits [tabulation]  number of hits"</b>. This tells the program how many lines of probes it has to read. In the case of the example, it will read 94972 lines in a row until the next set of probes (Sequence 2).</li>
+						<li>Line 4: Leave blank space</li>
+						<li>Line 5: Probe position, followed by tabulation and signal intensity of the probe, ie <b>"probe [tabulation] signal"</b>.</li>
 					</ul>
-					Note that fields must be <b>tab-separated</b>.
+					
+					<b class="color-red">NOTE</b>: In between sequences, you have to leave a blank space.
 					
 					<br><br>
 					
