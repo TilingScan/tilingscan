@@ -194,23 +194,27 @@
 			//Calculamos el valor de la media
 			$valor_meA = $meA/$VEN;
 			$valor_meB = $meB/$VEN;
-	
+			
+			//Diferencia
 			$dif = $valor_meB - $valor_meA;
-			$entra = 0;
+			$dif_i= (1/$valor_meB) - (1/$valor_meA);
 				
-			if($dif < 0)
-			{
-				//Ventana negativa
-				$dif = -$dif;
-				$escalon = 0;
-			}
-			else
+			if($dif >= $UMBRAL)
 			{
 				//Ventana positiva
 				$escalon = 1;
 			}
 			
-			if($dif >= $UMBRAL)
+			if($dif_i >= $UMBRAL)
+			{
+				//Ventana negativa
+				$escalon = 0;
+			}
+			
+			//Marcamos si entra o no
+			$entra = 0;
+			
+			if(($dif >= $UMBRAL) || ($dif_i >= $UMBRAL))
 			{
 				//--> para que ventana positiva este por encima de 1+(porcentaje*UMBRAL)
 				if(($escalon == 1) && ($valor_meB > (1.0 + ($UMBRAL*$PORCENTAJE))))
@@ -220,7 +224,7 @@
 				}
 				
 				//--> para que ventana negativa este por debajo de 1-(porcentaje*UMBRAL)
-				if(($escalon == 0) && ($valor_meB < (1.0 - ($UMBRAL*$PORCENTAJE))))
+				if(($escalon == 0) && ((1/$valor_meB) > (1.0 + ($UMBRAL*$PORCENTAJE))))
 				{
 					//Entramos en la region
 					$entra = 1;
@@ -230,17 +234,24 @@
 			//Si hemos entrado en la region
 			if($entra == 1)
 			{
+				//Guardamos la diferencia con la que entra
 				$dif_entrada = $dif;
+				$dif_entrada_i= $dif_i;
+				
+				//Guardamos el valor media de B con el que entra
 				$v_meB_entrada = $valor_meB;
-		
-				$ini_reg = $i + 1;
+				
+				//Inicio de region
+				$ini_reg = $i;
+				
+				//Iniciamos la media de la ventana C
 				$meC = 0;
-		
+				
 				for($j = $i + $VEN + 1; $j < ($i + $VEN + $VEN + 1); $j++)
 				{
 					$meC = $meC + $analizar[$j];
 				}
-		
+				
 				$valor_meC = $meC/$VEN;
 		
 				$masi = 1; //--> nuevo, anyado uno más!!
@@ -262,15 +273,15 @@
 				}
 				else
 				{
-					$dif = $valor_meC - $valor_meB;
+					$dif_i = (1/$valor_meB) - (1/$valor_meC);
 					
-					while(($dif < $UMBRAL) && ($valor_meB < (1.0 - ($UMBRAL*$PORCENTAJE))) && (($i + $VEN + $masi)<($tam - $VEN)))
+					while(($dif_i < $UMBRAL) && ((1/$valor_meB) > (1.0 + ($UMBRAL*$PORCENTAJE))) && (($i + $VEN + $masi)<($tam - $VEN)))
 					{
 						$meB = $meB + $analizar[$i + $VEN + $masi];
 						$meC = $meC + $analizar[$i + $VEN + $VEN + $masi] - $analizar[$i + $VEN + $masi];
 						$valor_meC = $meC/$VEN;
 						$valor_meB = $meB/($VEN + $masi);
-						$dif = $valor_meC - $valor_meB;
+						$dif_i = (1/$valor_meB) - (1/$valor_meC);
 		
 						$masi++;
 					}
@@ -364,7 +375,7 @@
 			$ids_chr = GenerarIndicesMargen($margen_izq, $margen_der);
 			
 			//Cogemos los nuevos ids de la ventana
-			$ventana[0] = $VEN + $MARGEN - 2;
+			$ventana[0] = min($VEN + $MARGEN - 2, $ini_array[$m]);
 			$ventana[1] = ($fin_array[$m] - $ini_array[$m]) + $ventana[0];
 				
 			//Subseleccionamos el vector de posiciones

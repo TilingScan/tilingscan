@@ -216,7 +216,7 @@
 						</tr>
 						<tr>
 							<td width="300" height="70" valign="middle">Percentage: </td>
-							<td valign="middle"><input type="text" name="PORCENTAJE" class="input" value="50">&nbsp; %
+							<td valign="middle"><input type="text" name="PORCENTAJE" class="input" value="75">&nbsp; %
 							</td>
 						</tr>
 					</table>

@@ -82,7 +82,7 @@
 		$txt = $txt."Chromosome	"._CHR." \n \n";
 		
 		//Guardamos la informacion proporcionada
-		$txt = $txt."Tthreshold	".$UMBRAL." \n";
+		$txt = $txt."Threshold	".$UMBRAL." \n";
 		$txt = $txt."Margin	".$MARGEN." \n";
 		$txt = $txt."Window size	".$VEN." \n";
 		
