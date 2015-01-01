@@ -5,7 +5,7 @@
 	ini_set('display_errors', '1');
 	
 	//URL
-	define('_URL', 'http://biprote.uv.es/');
+	define('_URL', 'http://tilingscan.uv.es/');
 
 	//Nombre del programa
 	define('_NAME', 'TilingScan');
@@ -20,7 +20,7 @@
 	define('_COPY', 'Univ. de Valencia, SPAIN');
 	
 	//Carpeta de datos
-	define('_DATA', 'app/data/');
+	define('_DATA', 'data/');
 	
 	//Carpeta temporal
 	define('_TEMP', 'temp/');
@@ -62,6 +62,6 @@
 	$p_strand = true;
 	
 	//Localizacion de Annotate
-	define('_ANNOTATE_URL', 'https://tilingscan.github.io/annotate/app.html');
+	define('_ANNOTATE_URL', 'http://tilingscan.github.io/annotate/app.html');
 	
 ?>
