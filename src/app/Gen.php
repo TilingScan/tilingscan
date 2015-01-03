@@ -27,9 +27,9 @@
 		define('_GAUSS', $filtro_gauss);
 		
 		//Archivos que vamos a incluir
-		$chromosomeF = $folder.'chr'.$chr.'_F.php';
-		$chromosomeR = $folder.'chr'.$chr.'_R.php';
-		$chromosomeA = $folder.'chr'.$chr.'_A.php';
+		$chromosomeF = $folder.$chr.'_F.php';
+		$chromosomeR = $folder.$chr.'_R.php';
+		$chromosomeA = $folder.$chr.'_A.php';
 		
 		//Comprobamos si ha seleccionado algun gen
 		if(isset($_POST['gen_'.$chr]))
@@ -56,8 +56,8 @@
 			$genes = CargarFichAnotacion($chromosomeA);
 			
 			//Creamos el titulo
-			$titulo = 'Gene '.$genes[0][$gen_id].' (Chr '._CHR.')';
-			$nombre = 'CHR'._CHR.'_'.$genes[0][$gen_id];
+			$titulo = 'Gene '.$genes[0][$gen_id].' ('._CHR.')';
+			$nombre = _CHR.'_'.$genes[0][$gen_id];
 			
 			//Mostramos la info del proyecto
 			ProyectoInfo($p_title, _ID, $p_autor, $p_descripcion, $p_date, $p_caducidad, true);

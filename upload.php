@@ -61,6 +61,21 @@
 				//************* Creamos el fichero de anotacion
 				$upload_file = $upload_dir.basename($_FILES['file_A']['name']);
 				
+				//Para comprobar errores
+				switch ($_FILES['file_A']['error'])
+				{
+					case UPLOAD_ERR_OK:
+						break;
+					case UPLOAD_ERR_NO_FILE:
+						throw new RuntimeException('No file sent.');
+					case UPLOAD_ERR_INI_SIZE:
+						throw new RuntimeException('Exceeded INI size limit.');
+					case UPLOAD_ERR_FORM_SIZE:
+						throw new RuntimeException('Exceeded FORM size limit.');
+					default:
+						throw new RuntimeException('Unknown errors.');
+				}
+				
 				//Comprobamos si los podemos mover a la carpeta temporal
 				if(move_uploaded_file($_FILES['file_A']['tmp_name'], $upload_file))
 				{

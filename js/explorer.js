@@ -349,7 +349,7 @@ function ExplorerClickGen(x,y)
 		//Creamos la URL
 		var URL = 'http://www.candidagenome.org/cgi-bin/locus.pl?locus=';
 		URL = URL + explorer_genes_id[explorer_num][gen];
-		URL = URL + '&organism=' + proyecto_organismo;
+		//URL = URL + '&organism=' + proyecto_organismo;
 		
 		//Creamos la ventana
 		var win = window.open(URL, '_blank');ç

@@ -36,7 +36,7 @@
 			<!-- Formulario -->
 			<form name="create" enctype="multipart/form-data" action="./upload" method="post" class="form">
 			
-				<input type="hidden" name="MAX_FILE_SIZE" value="3000000000000000000000">
+				<!-- <input type="hidden" name="MAX_FILE_SIZE" value="30000000000000000000000000000"> -->
 				
 				<!-- Titulo del proyecto -->
 				<b>Project title:</b><br>

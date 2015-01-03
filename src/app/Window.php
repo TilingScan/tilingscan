@@ -67,12 +67,12 @@
 		$CADENA = $_POST['CADENA'];
 	
 		//Archivos que vamos a incluir
-		$chromosomeF = $folder.'chr'.$chr.'_F.php';
-		$chromosomeR = $folder.'chr'.$chr.'_R.php';
-		$chromosomeA = $folder.'chr'.$chr.'_A.php';
+		$chromosomeF = $folder.$chr.'_F.php';
+		$chromosomeR = $folder.$chr.'_R.php';
+		$chromosomeA = $folder.$chr.'_A.php';
 	
-		$titulo = 'Window Search Chr '._CHR.' ('.$CADENA.')';
-		$nombre = 'W_CHR'._CHR.'_'.$CADENA;
+		$titulo = 'Window Search '._CHR.' ('.$CADENA.')';
+		$nombre = 'W_'._CHR.'_'.$CADENA;
 	
 		//Variables
 		$chr = array();

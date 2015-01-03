@@ -1,6 +1,6 @@
 <?php
-	
-	//Anotacion('C_albicans.gff', '');
+
+	//Anotacion('sut.gff', '');
 
 	//Funcion que procesa el fichero de anotacion
 	function Anotacion($fich, $dest)
@@ -21,84 +21,75 @@
 		$aux_id = 0;
 		$aux_tam = 0;
 		
+		//Para que detecte automaticamente los saltos de linea
+		ini_set('auto_detect_line_endings', true);
+		
 		//Abrimos el fichero
 		$entrada = fopen($fich, 'r');
 		
-		//Guardamos todo el fichero en un string
-		$string = fgets($entrada);
-		
-		//Cogemos el caracter que corresponde a un retorno de carro
-		$car = chr(13);
-		
-		//Separamos el string por saltos de carro
-		$var = explode($car, $string);
-		
-		//Cogemos la longitud
-		$lon = count($var);
-		
-		//Recorremos todo el vector
-		for($i = 0; $i < $lon; $i++)
+		//Recorremos todo el fichero
+		while( !feof($entrada) )
 		{
-			//COmprobamos que no esta vacia
-			if(!empty($var[$i]))
+			//Leemos
+			$string = fgets($entrada);
+			
+			if($string[0] != '#' && $string[0] != '>' && $string[0] != '' && !empty($string))
 			{
-				//Comprobamos que no sea de la cabecera o de la parte de DNA
-				if($var[$i][0] != '#' && $var[$i][0] != '>')
+				//Cogemos el tipo
+				$ti = AnotacionComprobarTipo($string);
+				
+				//Comprobamos que no sea chromosome
+				if($ti === false)
 				{
-					//Cogemos el tipo
-					$ti = AnotacionComprobarCHROMOSOME($var[$i]);
+					//Continuamos
+					continue;
+				}
+				
+				//Cogemos el cromosoma que estamos
+				$aux_nam = AnotacionGetCHR($string);
+				
+				//Cogemos el indice correcto
+				$aux_id = AnotacionGetNUM($aux_nam, $chr_nam);
+				
+				//Comprobamos si el ID existe
+				if($aux_id == -1)
+				{
+					//Cogemos el nombre del cromosoma
+					$chr_nam[$chr_tam] = $aux_nam;
 					
-					//Comprobamos el tipo que es
-					if($ti == 'CHR')
-					{
-						//Si es CHROMOSOME, iniciamos el cromosoma
-							
-						//Cogemos el nombre del cromosoma
-						$chr_nam[$chr_tam] = AnotacionGetCHR($var[$i]);
-							
-						//Iniciamos el resto de vectores
-						$chr_ids[$chr_tam] = array();
-						$chr_ini[$chr_tam] = array();
-						$chr_fin[$chr_tam] = array();
-						$chr_tip[$chr_tam] = array();
-							
-						//Incrementamos el contador
-						$chr_tam++;
+					//Iniciamos el resto de vectores
+					$chr_ids[$chr_tam] = array();
+					$chr_ini[$chr_tam] = array();
+					$chr_fin[$chr_tam] = array();
+					$chr_tip[$chr_tam] = array();
+					
+					//Guardamos el ID
+					$aux_id = $chr_tam;
+					
+					//Incrementamos el contador
+					$chr_tam++;
 						
-						//Cogemos el organismo
-						if($organismo == '')
-						{
-							$organismo = AnotacionGetOrganismo($var[$i]);
-						}
-					}
-					else if($ti == 'ORF')
+					//Cogemos el organismo
+					if($organismo == '')
 					{
-						//Si no es CHROMOSOME
-							
-						//Cogemos el cromosoma que estamos
-						$aux_nam = AnotacionGetCHR($var[$i]);
-							
-						//Cogemos el indice correcto
-						$aux_id = AnotacionGetNUM($aux_nam, $chr_nam);
-							
-						//Cogemos la dimension
-						$aux_tam = count($chr_ids[$aux_id]);
-							
-						//Cogemos la posicion inicial
-						$chr_ini[$aux_id][$aux_tam] = AnotacionGetINI($var[$i]);
-							
-						//Cogemos la posicion final
-						$chr_fin[$aux_id][$aux_tam] = AnotacionGetFIN($var[$i]);
-							
-						//Cogemos el tipo (forward o reverse)
-						$chr_tip[$aux_id][$aux_tam] = AnotacionGetTIPO($var[$i]);
-							
-						//Cogemos el nombre
-						$chr_ids[$aux_id][$aux_tam] = AnotacionGetID($var[$i]);
+						//$organismo = AnotacionGetOrganismo($string);
 					}
 				}
 				
-				//Fin comprobacion de la cabecera
+				//Cogemos la dimension
+				$aux_tam = count($chr_ids[$aux_id]);
+					
+				//Cogemos la posicion inicial
+				$chr_ini[$aux_id][$aux_tam] = AnotacionGetINI($string);
+					
+				//Cogemos la posicion final
+				$chr_fin[$aux_id][$aux_tam] = AnotacionGetFIN($string);
+					
+				//Cogemos el tipo (forward o reverse)
+				$chr_tip[$aux_id][$aux_tam] = AnotacionGetTIPO($string);
+					
+				//Cogemos el nombre
+				$chr_ids[$aux_id][$aux_tam] = AnotacionGetID($string);
 			}
 			
 			//Fin comprobacion que no sea vacia
@@ -121,10 +112,9 @@
 	}
 	
 	//Funcion que comprueba si tenemos un ORF o no
-	function AnotacionComprobarCHROMOSOME($txt)
+	function AnotacionComprobarTipo($txt)
 	{
-		//Lo que devolvemos
-		$devolver = 'otro';
+		//Iniciamos
 		$tx = 'otro';
 		
 		//Particionamos el string
@@ -133,25 +123,22 @@
 		//Si no esta vacio
 		if(!empty($txt2[2]))
 		{
+			//Cogemos el texto
 			$tx = preg_replace('/[^A-Za-z0-9\. -]/', '', $txt2[2]);
+			
+			//Comprobamos si tenemos un chromosome
+			if($tx == 'chromosome')
+			{
+				//Si es chromosome, devolvemos un false
+				return false;
+			}
+			
+			//Devolvemos true
+			return true;
 		}
 		
-		//Comprobamos si tenemos un chromosome
-		if($tx == 'chromosome')
-		{
-			//Si es chromosome, devolvemos un true
-			$devolver = 'CHR';
-		}
-		
-		//Comprobamos si tenemos un ORF
-		if($tx == 'ORF')
-		{
-			//Si es chromosome, devolvemos un true
-			$devolver = 'ORF';
-		}
-		
-		//Lo devolvemos
-		return $devolver;
+		//Devolvemos que no
+		return false;
 	}
 	
 	//Funcion que devuelve el nombre del cromosoma
@@ -160,8 +147,24 @@
 		//Particionamos el string
 		$txt2 = explode('	', $txt);
 		
-		//Devolvemos el nombre del cromosoma
-		return preg_replace('/[^A-Za-z0-9\. -]/', '', $txt2[0]);
+		//Cogemos el nombre del cromosoma
+		$nuevo = preg_replace('/[^A-Za-z0-9\. -]/', '', $txt2[0]);
+		
+		//DEVOLVEMOS DIRECTAMENTE
+		return $nuevo;
+		
+		//Comprobamos si es chr
+		if(strpos($nuevo, 'chr') === false)
+		{
+			//Si no, lo devolvemos tal cual
+			return $nuevo;
+		}
+		else
+		{
+			//Hay chr, comprobamos si esta en romanos
+			$n = substr($str, 3);
+			
+		}
 	}
 	
 	//Funcion que devuelve el nombre del organismo
@@ -197,6 +200,9 @@
 				return $i;
 			}
 		}
+		
+		//Si no existe, devolvemos un -1
+		return -1;
 	}
 	
 	
@@ -365,7 +371,7 @@
 			$num = count($chr_ids[$i]);
 				
 			//Mostramos el nombre
-			echo $chr_nam[$i].'<br>';
+			echo $chr_nam[$i].'<br><br>';
 				
 			//Recorremos todos
 			for($j = 0; $j < $num; $j++)
@@ -382,6 +388,8 @@
 				//Guardamos la posicion final
 				echo 'Fin: '.$chr_fin[$i][$j].' <br>';
 			}
+			
+			echo '<hr>';
 		}
 		//Listo
 	}

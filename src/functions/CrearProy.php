@@ -89,7 +89,7 @@
 		fwrite($entrada, '$'.'p_descripcion = "'.$p_descripcion.'"; ');
 		
 		//Guardamos el organismo
-		fwrite($entrada, '$'.'p_organismo = "'.$p_organismo.'"; ');
+		//fwrite($entrada, '$'.'p_organismo = "'.$p_organismo.'"; ');
 		
 		//Guardamos la strand
 		fwrite($entrada, '$'.'p_strand = '.$p_strand.'; ');

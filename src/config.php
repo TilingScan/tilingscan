@@ -1,5 +1,8 @@
 <?php
-
+	
+	//Zona horaria
+	date_default_timezone_set('Europe/Madrid');
+	
 	//Activamos que muestre todos los errores
 	error_reporting(-1);
 	ini_set('display_errors', '1');
@@ -11,7 +14,7 @@
 	define('_NAME', 'TilingScan');
 	
 	//Fecha
-	define('_VERSION', 'Version 0.1, 2014');
+	define('_VERSION', 'Version 1.0, 2014');
 	
 	//Autores
 	define('_AUTHORS', 'Vicente Arnau, Jose E. Perez, Ana Miguel, Jose M. Juanes');
@@ -62,6 +65,6 @@
 	$p_strand = true;
 	
 	//Localizacion de Annotate
-	define('_ANNOTATE_URL', 'http://tilingscan.github.io/annotate/app.html');
+	define('_ANNOTATE_URL', 'http://annotateapp.github.io/app.html');
 	
 ?>

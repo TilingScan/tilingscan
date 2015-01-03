@@ -6,7 +6,7 @@
 	require 'src/include.php';
 	
 	//Comprobamos si hay que eliminar algun proyecto
-	//ProyectoEliminar();
+	ProyectoEliminar();
 	
 ?>
 <html>

@@ -37,13 +37,13 @@
 		define('_GAUSS', $gauss);
 		
 		//Archivos que vamos a incluir
-		$chromosomeF = $folder.'chr'.$chr.'_F.php';
-		$chromosomeR = $folder.'chr'.$chr.'_R.php';
-		$chromosomeA = $folder.'chr'.$chr.'_A.php';
+		$chromosomeF = $folder.$chr.'_F.php';
+		$chromosomeR = $folder.$chr.'_R.php';
+		$chromosomeA = $folder.$chr.'_A.php';
 		
 		//Titulos
-		$titulo = 'Region Chr '._CHR.'';
-		$nombre = 'R_CHR'._CHR.'';
+		$titulo = 'Region '._CHR.'';
+		$nombre = 'R_'._CHR.'';
 		
 		//Generamos la nueva url
 		$url = 'view-region.php?id='._ID.'&chr='._CHR.'&ini='.$ini.'&fin='.$fin.'&gauss='._GAUSS;

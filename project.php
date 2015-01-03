@@ -87,7 +87,7 @@
 					<table border="0" width="900" algin="center" class="h4">
 						<tr>
 							<td width="300" height="70" valign="middle">Select chromosome: </td>
-							<td valign="middle"><?php ListaCHRAnnotation($dir, '', 1); ?></td>
+							<td valign="middle"><?php ListaCHR($dir, '', 1); ?></td>
 						</tr>
 						<tr>
 							<td width="300" height="70" valign="middle">Gauss Filter (5 coef.): </td>
@@ -131,7 +131,7 @@
 						<tr>
 							<td width="300" height="70" valign="middle">Select chromosome: </td>
 							<td valign="middle">
-								<?php ListaCHRAnnotation($dir, 'ProjectCambiarSelectGEN(this);', 2); ?> 
+								<?php ListaCHR($dir, 'ProjectCambiarSelectGEN(this);', 2); ?> 
 							</td>
 						</tr>
 						<tr>
@@ -182,7 +182,7 @@
 					<table border="0" width="920" algin="center" class="h4">
 						<tr>
 							<td width="300" height="70" valign="middle">Select chromosome: </td>
-							<td valign="middle"><?php ListaCHRAnnotation($dir, '', 3); ?></td>
+							<td valign="middle"><?php ListaCHR($dir, '', 3); ?></td>
 						</tr>
 						<tr <?php if($p_strand == false) echo 'style="display:none;"'; ?>>
 							<td width="300" height="70" valign="middle">Search in </td>

@@ -8,10 +8,13 @@
 		$chr_nu = array();
 		$chr_ex = array();
 		$chr_list = array();
-		$chr_id = 0;
+		$chr_id = '';
 		$chr_num = 0;
 		$i = 0;
 		$i_max = 0;
+		
+		//Para que detecte automaticamente los saltos de linea
+		ini_set('auto_detect_line_endings', true);
 	
 		//Abrimos el fichero
 		$entrada = fopen($fich, 'r');
@@ -132,11 +135,8 @@
 	//Funcion que obtiene el cromosoma
 	function ExpresionGetCHR($string)
 	{
-		//Buscamos 'chr'
-		$pos = strpos($string, "chr");
-	
-		//Cogemos solo el numero
-		$rest = substr($string, $pos + 3);
+		//Cogemos el ID
+		$rest = substr($string, 7);
 	
 		//Lo convertimos a entero
 		return preg_replace('/[^A-Za-z0-9\. -]/', '', $rest);
@@ -189,7 +189,7 @@
 		$repetido = false;
 		
 		//Nombre del fichero
-		$file = $dest.'chr'.$cr_id.'_'.$tipo.'.php';
+		$file = $dest.$cr_id.'_'.$tipo.'.php';
 		
 		//Comprobamos si esta repetido
 		if(file_exists($file))
@@ -220,7 +220,7 @@
 		}
 		
 		//Ahora hay que comprobar si tiene fichero de anotacion
-		if(file_exists($dest.'chr'.$cr_id.'_A.php'))
+		if(file_exists($dest.$cr_id.'_A.php'))
 		{
 			//Guardamos el archivo $file
 			$entrada = fopen($file, 'w');

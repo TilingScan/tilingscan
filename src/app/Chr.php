@@ -33,9 +33,9 @@
 		define('_GAUSS', $filtro_gauss);
 		
 		//Archivos que vamos a incluir
-		$chromosomeF = $folder.'chr'.$chr.'_F.php';
-		$chromosomeR = $folder.'chr'.$chr.'_R.php';
-		$chromosomeA = $folder.'chr'.$chr.'_A.php';
+		$chromosomeF = $folder.$chr.'_F.php';
+		$chromosomeR = $folder.$chr.'_R.php';
+		$chromosomeA = $folder.$chr.'_A.php';
 		
 		//Vectores para pasarle a la imagen
 		$chr = array();
@@ -97,7 +97,7 @@
 		Explorer();
 		
 		//Generamos el boton para descargar las imagenes
-		ImgBtn('CHR_'._CHR);
+		ImgBtn(_CHR);
 	}
 	else
 	{
