@@ -62,9 +62,9 @@
 			<?php ProyectoInfo($p_title, $id, $p_autor, $p_descripcion, $p_date, $p_caducidad, false); ?>
 			
 			<!-- Botones con las aplicaciones -->
-			<a class="dashboard-btn background-blue" onclick="AppProjectMostrar('Chr');">Visualize chromosome</a>
-			<a class="dashboard-btn background-red" onclick="AppProjectMostrar('Gene');">Visualize gene</a>
-			<a class="dashboard-btn background-water" onclick="AppProjectMostrar('Window');">Window Search</a>
+			<a class="dashboard-btn background-blue" onclick="AppProjectMostrar('Chr');" title="Visualize your expression data alongside a chromosome">Visualize chromosome</a>
+			<a class="dashboard-btn background-red" onclick="AppProjectMostrar('Gene');" title="Visualize your expression data alongside a specific annotated gene">Visualize gene</a>
+			<a class="dashboard-btn background-water" onclick="AppProjectMostrar('Window');" title="Search for differentially expressed regions">Window Search</a>
 			
 			<!-- Espacios -->
 			<br><br>
@@ -76,7 +76,10 @@
 				<div class="form" align="center">
 					
 					<!-- Titulo -->
-					<span class="h2">Visualize chromosome</span>
+					<span class="h2">Visualize chromosome</span><br>
+					
+					<!-- Descripcion -->
+					Visualize your expression data alongside a chromosome.
 					
 					<!-- Espacios -->
 					<br><br>
@@ -119,7 +122,10 @@
 				<div class="form" align="center">
 					
 					<!-- Titulo -->
-					<span class="h2">Visualize gene</span>
+					<span class="h2">Visualize gene</span><br>
+					
+					<!-- Descripcion -->
+					Visualize your expression data alongside a specific annotated gene.
 					
 					<!-- Espacios -->
 					<br><br>
@@ -171,7 +177,10 @@
 				<div class="form" align="center">
 				
 					<!-- Titulo -->
-					<span class="h2">Window search</span>
+					<span class="h2">Window search</span><br>
+					
+					<!-- Descripcion -->
+					Search for differentially expressed regions.
 					
 					<!-- Espacios -->
 					<br><br>
