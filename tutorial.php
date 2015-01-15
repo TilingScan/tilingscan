@@ -59,7 +59,7 @@
 				
 				<!-- Contenido -->
 				<div class="tutorial-cont" id="2">
-					You only need a web browser to execute TilingScan. No other software are required.<br>
+					You only need a web browser to execute TilingScan. No other software is required.<br>
 					Compatible browsers:<br>
 					<ul>
 						<li>Internet Explorer 10+</li>
