@@ -24,48 +24,22 @@
 			<span class="h2">Do you need help? Want to report an issue? Contact us: </span>
 			
 			<!-- Espacios -->
-			<br><br> 
+			<br><br><br>
 			
-			<!-- Cartel de enviado -->
-			<?php 
-				//Comprobamos si hemos enviado algo
-				if(!empty($_GET))
-				{
-					//Ponemos el bloque
-					echo '<div class="alert background-green">Your email has been sent. Thank you.</div>';
-					
-					//Espacios
-					echo '<br><br>';
-				}
-			?>
-			
-			<!-- Formulario -->
-			<form name="create" enctype="multipart/form-data" action="support?action=send" method="post" class="form">
+			<!-- Tabla -->
+			<div class="table" align="center">
 				
-				<!-- Nombre -->
-				<b>Yout name:</b><br>
-				<input name="name" id="name" type="text" class="input-500"><br><br>
+				<!-- Celda Tutorial -->
+				<div class="table-cell">
+					<a href="mailto:amiblan@alumni.uv.es" class="table-btn background-blue">amiblan@alumni.uv.es</a>
+				</div>
 				
-				<!-- Email -->
-				<b>Yout email:</b><br>
-				<input name="email" id="email" type="text" class="input-500"><br><br>
+				<!-- Celda Soporte -->
+				<div class="table-cell">
+					<a href="mailto:jmjuanes@outlook.com" class="table-btn background-green">jmjuanes@outlook.com</a>
+				</div>
 				
-				<!-- Asunto -->
-				<b>Subject:</b><br>
-				<input name="asunto" id="asunto" type="text" class="input-500"><br><br>
-				
-				<!-- Comentario -->
-				<b>Message:</b><br>
-				<textarea name="descripcion" id="descripcion" class="input-500"></textarea><br><br>
-				
-				<!-- Boton de enviar -->
-				<input type="submit" value="Send" class="form-btn background-blue"><br>
-				
-				<!-- Aviso -->
-				<small>All fields are required.</small>
-			
-			<!-- Cerramos el form -->
-			</form>
+			</div>
 			
 		</div>
 		
