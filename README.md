@@ -1,8 +1,26 @@
-TilingScan
-==========
+# TilingScan
 
-An application for the identification of differentially expressed DNA regions in Tiling microarray data.
+![](img/tutorial/0.png)
 
-Copyright 2014 Vicente Arnau, Jose Enrique Perez, Ana Miguel and Jose M. Juanes. 
+**TilingScan** is an application for the identification of differentially expressed DNA regions in Tiling microarray data. You can use it on [tilingscan.uv.es](http://tilingscan.uv.es).
 
-**Universidad de Valencia**.
+
+## Install a local copy of TilingScan
+
+Also, you can install TilingScan in your localhost and use it with your local data. For this, you need:
+
+- Install **Apache** and enable the *mod_rewrite*.
+- Install PHP v 5.x.
+
+That's all! Now you can use TilingScan in the **localhost** mode. If you have problems with the installation, please read the [Installation guide]().
+
+## Support
+
+If you have a technical problem with **TilingScan**, please contact with Jose M. in [www.jmjuanes.es](http://www.jmjuanes.es).
+
+
+## License
+
+Copyright 2014 Vicente Arnau, Jose Enrique Perez, Ana Miguel and Jose M. Juanes. All rights reserved.
+
+**Universidad de Valencia**
