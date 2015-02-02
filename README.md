@@ -7,12 +7,12 @@
 
 ## Install a local copy of TilingScan
 
-Also, you can install TilingScan in your localhost and use it with your local data. For this, you need:
+You can install **TilingScan** in your *localhost* and use it with your local data. For this, you need:
 
 - Install **Apache** and enable the *mod_rewrite*.
-- Install PHP v 5.x.
+- Install **PHP**, version 5.5.3 or higher.
 
-That's all! Now you can use TilingScan in the **localhost** mode. If you have problems with the installation, please read the [Installation guide]().
+If you have problems with the installation, please read the [Installation guide]().
 
 ## Support
 
