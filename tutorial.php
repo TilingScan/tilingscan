@@ -136,7 +136,7 @@
 				<br><br>
 				
 				<b class="tutorial-sec">Experimental files</b><br>
-				To upload you data files, create a tabulated text file (.txt) containing the following information::<br><br>
+				To upload you data files, create a tabulated text file (.txt) containing the following information:<br><br>
 				<div align="center"><img src="img/tutorial/12.png" border="0"></div><br>
 				
 				<ul>
@@ -152,7 +152,7 @@
 				<br><br>
 				
 				<b class="tutorial-sec">Download example files</b><br>
-				You can download an example data set <a href="https://dl.dropboxusercontent.com/u/224579124/TilingScanExample.zip" target="_blank">here</a>.
+				You can download an example data set <a href="https://github.com/TilingScan/example-data/archive/master.zip" target="_blank">here</a>.
 									
 				<br><br>
 				
