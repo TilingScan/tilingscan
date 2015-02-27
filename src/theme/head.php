@@ -15,6 +15,6 @@
 <script type="text/javascript" src="./js/view.js"></script>
 <script type="text/javascript" src="./js/new.js"></script>
 <script type="text/javascript" src="./js/project.js"></script>
-<script type="text/javascript" src="./js/lib/jszip.js"></script>
-<script type="text/javascript" src="./js/lib/FileSaver.js"></script>
+<script type="text/javascript" src="https://annotateapp.github.io/libs/jszip.js"></script>
+<script type="text/javascript" src="https://annotateapp.github.io/libs/FileSaver.js"></script>
 <script type="text/javascript" src="https://jmjuanes.github.io/jmCanvas.js/jmCanvas.js"></script>
