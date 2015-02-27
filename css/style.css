@@ -228,26 +228,26 @@ small { font-size: 15px; color: #96a4a5; }
 
 /* Elemento del tutorial */
 .tutorial-item { width: 910px; min-height: 50px; background-color: #f0f0f0; } 
-.tutorial-item { font-size: 25px; line-height: 45px; } 
-.tutorial-item { display: block; font-weight: bold; margin-bottom: 20px; } 
+.tutorial-item { font-size: 25px; line-height: 45px; font-weight: bold; } 
+.tutorial-item { display: block; margin-bottom: 20px; margin-top: 20px; } 
 .tutorial-item { padding-left: 20px; padding-bottom: 10px; } 
 .tutorial-item { padding-right: 20px; padding-top: 10px; } 
-
-/* Titulo de cada seccion */
-.tutorial-title { cursor: pointer; } 
+.tutorial-item { cursor: pointer; } 
 
 /* Contenido del elemento */
-.tutorial-cont { width: 890px; min-height: 50px; background-color: #ffffff; }
+.tutorial-cont { width: 908px; min-height: 50px; background-color: #ffffff; } 
 .tutorial-cont { font-size: 20px; line-height: 30px; font-weight: normal; } 
-.tutorial-cont { padding: 10px; display: none; } 
+.tutorial.cont { margin-top: 10px; margin-bottom: 10px; } 
+.tutorial-cont { padding: 20px; display: none; } 
+.tutorial-cont { border-color: #ababab; border-style: solid; border-width: 1px; } 
 
 /* Seccion */
 .tutorial-sec { font-size: 25px; }
 
 /* Boton para cerrar */
-.tutorial-close { display: block; width: 890px; height: 30px; } 
+.tutorial-close { display: block; width: 910px; height: 50px; } 
 .tutorial-close { text-align: center; color: #ffffff; cursor: pointer; } 
-.tutorial-close { line-height: 30px; font-size: 20px; } 
+.tutorial-close { line-height: 50px; font-size: 20px; } 
 .tutorial-close { background-color: #ababab; } 
 
 /* Al poner encima el raton */
