@@ -93,7 +93,7 @@
 							<td valign="middle"><?php ListaCHR($dir, '', 1); ?></td>
 						</tr>
 						<tr>
-							<td width="300" height="70" valign="middle">Gauss Filter (5 coef.): </td>
+							<td width="300" height="70" valign="middle">Gauss Filter (7 coef.): </td>
 							<td valign="middle"><input type="text" name="gauss" class="input" value="3">&nbsp; times. 
 							<span class="color-red">&nbsp; (0 = No filter)</span>
 							</td>
@@ -150,7 +150,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td width="300" height="70" valign="middle">Gauss Filter (5 coef.): </td>
+							<td width="300" height="70" valign="middle">Gauss Filter (7 coef.): </td>
 							<td valign="middle"><input type="text" name="gauss" class="input" value="3">&nbsp; times. 
 							<span class="color-red">&nbsp; (0 = No filter)</span>
 							</td>
@@ -203,7 +203,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td width="300" height="70" valign="middle">Gauss Filter (5 coef.): </td>
+							<td width="300" height="70" valign="middle">Gauss Filter (7 coef.): </td>
 							<td valign="middle"><input type="text" name="gauss" class="input" value="3">&nbsp; times. 
 							<span class="color-red">&nbsp; (0 = No filter)</span>
 							</td>

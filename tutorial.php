@@ -186,7 +186,7 @@
 					<li>The chromosome in which the gene is encoded (Select chromosome).</li>
 					<li>The systematic identifier of the gene of interest (ORF name) in Select gene.</li>
 					<li>The margins for the representation of the gene, in terms of length of the flanking regions. (Margin). For example, if you select 100 probes for the margin, you will display the entire ORF length + 100 bp up/downstream. If other ORFs are encoded whithin the margins, they will also be displayed.</li>
-					<li>Gauss filter: Smoothing of the signal. Gauss filter of 5 coefficients.</li>
+					<li>Gauss filter: Smoothing of the signal. Gauss filter of 7 coefficients.</li>
 				</ul>
 				TilingScan will open a detailed image of the selected gene:<br><br>
 				<div align="center"><img src="img/tutorial/6.png" border="0"></div>
@@ -214,7 +214,7 @@
 				<ul>
 					<li><b>Chromosome</b>: Chromosome on which the search will be made.</li>
 					<li><b>Strand</b>: Strand on which the search will be made.</li>
-					<li><b>Gauss filter</b>: Smoothing of the signal. Gauss filter of 5 coefficients.</li>
+					<li><b>Gauss filter</b>: Smoothing of the signal. Gauss filter of 7 coefficients.</li>
 					<li><b>Window size</b>: Lenght of the region to search for differences.</li>
 					<li><b>Margin</b>: Number of probes on both sides of the detected region.</li>
 					<li><b>Threshold:</b> Minimum fold-change that is required for a region to be considered of significant change.</li>
