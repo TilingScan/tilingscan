@@ -12,6 +12,7 @@
 		
 		//Cogemos la dimension del vector
 		$lon = count($var);
+		
 		//Aplicamos el filtrado de Gauss $num veces
 		for($k = 0; $k < $num; $k++)
 		{
