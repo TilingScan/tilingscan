@@ -285,9 +285,9 @@
 		$img = imagecreatetruecolor($anc + 30, $alt);
 		
 		//Iniciamos los colores
-		$blanco = imagecolorallocate($img, 255, 255, 255);
-		$negro = imagecolorallocate($img, 67, 74, 84);
-		$gris = imagecolorallocate($img, 170, 178, 189);
+		$blanco = ColorBlanco($img);
+		$negro = ColorNegro($img);
+		$gris = ColorGris($img);
 		
 		//Creamos el fondo
 		imagefilledrectangle($img, 0, 0, $anc + 30, $alt, $blanco);
@@ -319,8 +319,8 @@
 	function ImgSituarEje($img, $pos, $num, $anc)
 	{
 		//Colores
-		$negro = imagecolorallocate($img, 67, 74, 84);
-		$gris = imagecolorallocate($img, 170, 178, 189);
+		$negro = ColorNegro($img);
+		$gris = ColorGris($img);
 		
 		//Situamos el eje horizontal
 		imageline($img, _IMG_ANC_MARGEN + 1, _IMG_ALT_TITULO + $pos, $anc, _IMG_ALT_TITULO + $pos, $gris);
@@ -336,10 +336,10 @@
 	function ImgSituarTextos($img, $anc, $alt, $titulo)
 	{
 		//Iniciamos los colores
-		$blanco = imagecolorallocate($img, 255, 255, 255);
-		$negro = imagecolorallocate($img, 67, 74, 84);
-		$azul = imagecolorallocate($img, 74, 137, 220);
-		$rojo = imagecolorallocate($img, 233, 87, 63);
+		$blanco = ColorBlanco($img);
+		$negro = ColorNegro($img);
+		$azul = ColorAzul($img);
+		$rojo = ColorRojo($img);
 		
 		//Ponemos el rectangulo arriba
 		imagefilledrectangle($img, 30, 0, $anc, _IMG_ALT_TITULO, $blanco);
@@ -360,7 +360,7 @@
 	function ImgSituarNucleotido($img, $i, $j, $chr)
 	{
 		//Iniciamos el color
-		$negro = imagecolorallocate($img, 67, 74, 84);
+		$negro = ColorNegro($img);
 		
 		//Situamos el valor
 		imagettftext($img, 10, 0, _IMG_ANC_MARGEN + $j, _IMG_ALT_TITULO + _IMG_ALT_ZONA + 13, $negro, _FONT, $chr[0][$i]);
@@ -372,7 +372,7 @@
 	function ImgSituarNucleotido($img, $chr, $ini, $fin)
 	{
 		//Iniciamos el color
-		$gris = imagecolorallocate($img, 67, 74, 84);
+		$gris = ColorNegro($img);
 		
 		//Generamos el titulo
 		$tit = '['.$chr[0][$ini].', '.$chr[0][$fin - 1].']';
@@ -394,9 +394,9 @@
 		if($p_strand == true)
 		{
 			//Cogemos los colores
-			$azul = imagecolorallocate($img, 74, 137, 220);
-			$rojo = imagecolorallocate($img, 233, 87, 63);
-			$blanco = imagecolorallocate($img, 255, 255, 255);
+			$azul = ColorAzul($img);
+			$rojo = ColorRojo($img);
+			$blanco = ColorBlanco($img);
 			
 			//Posiciones de la leyenda
 			$px = _IMG_ANC_MARGEN + 180;
@@ -425,8 +425,8 @@
 		global $img_zoom;
 		
 		//Cogemos los colores
-		$azul = imagecolorallocate($img, 74, 137, 220);
-		$rojo = imagecolorallocate($img, 233, 87, 63);
+		$azul = ColorAzul($img);
+		$rojo = ColorRojo($img);
 		
 		//Pintamos la recta del Reverse
 		$o_x = _IMG_ANC_MARGEN + $j;
@@ -450,7 +450,7 @@
 	function ImgWindow($img, $i, $j, $chr, $tipo)
 	{
 		//Cogemos los colores
-		$morado = imagecolorallocate($img, 154, 87, 180);
+		$morado = ColorMorado($img);
 		
 		//Valores para la recta
 		$o_x = _IMG_ANC_MARGEN + $j;
@@ -495,10 +495,10 @@
 		global $img_genes_cont, $img_genes_id, $img_genes_px, $img_genes_py, $img_genes_an;
 		
 		//Colores
-		$azul = imagecolorallocate($img, 74, 137, 220);
-		$rojo = imagecolorallocate($img, 233, 87, 63);
-		$gris = imagecolorallocate($img, 170, 178, 189);
-		$morado = imagecolorallocate($img, 154, 87, 180);
+		$azul = ColorAzul($img);
+		$rojo = ColorRojo($img);
+		$gris = ColorGris($img);
+		$morado = ColorMorado($img);
 		
 		//Variables del rectangulo del gen
 		$box_anc = ($genes_fin[$g] - $genes_ini[$g])*$img_zoom;
@@ -762,7 +762,7 @@
 	function ImgDibujarKb($img, $j, $i, $kb)
 	{
 		//Iniciamos el color
-		$gris = imagecolorallocate($img, 170, 178, 189);
+		$gris = ColorGris($img);
 		
 		//Calculamos la recta
 		$o_x = _IMG_ANC_MARGEN + $j;

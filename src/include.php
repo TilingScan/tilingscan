@@ -23,4 +23,5 @@
 	//Incluimos los plugins
 	require 'src/functions/plugins/Explorer.php';
 	require 'src/functions/plugins/Annotate.php';
+	require 'src/functions/plugins/Colores.php';
 ?>
