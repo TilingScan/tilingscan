@@ -293,6 +293,48 @@
 				
 				<div class="tutorial-close"  onclick="AbrirCerrar('7');">Close</div>
 			</div>
+		
+			<!-- Titulo -->
+			<div class="tutorial-item" onclick="AbrirCerrar('8');">Analyze NGS data.</div>
+			
+			<!-- Contenido -->
+			<div class="tutorial-cont" id="8">
+				
+				 <b>TilingScan</b> can be used to analyze NGS data from BAM files. For this, we have developed a program called <b>Cover2Tiling</b>, that converts BAM files into TilingScan compatible files locally, and can be freely downloaded at <a href="https://github.com/TilingScan/cover2tiling" target="_blank">https://github.com/TilingScan/cover2tiling</a>. <br><br>
+				 
+				 <b class="tutorial-sec">Requirements</b><br>
+				 
+				 <ul>
+				 	<li><b>SAMTOOLS latest version</b> (important!). You can download it and read the installation manual <a href="http://www.htslib.org/download/" target="_blank">here</a>.</li>
+				 	<li><b>Cover2Tiling executable</b>. Download the latest release from <a href="https://github.com/TilingScan/cover2tiling/releases" target="_blank">here</a>.</li>
+				 </ul>
+				 
+				 <b class="tutorial-sec">How to use it</b><br>
+				 
+				 To convert BAM to TilingScan input format, first open an terminal and navegate to your data directory. 
+				 Next, use the <b>SAMTOOLS</b> <u>mpileup</u> command for generate the coverage of your BAM:<br><br>
+				 
+				 <div align="center"><img src="img/tutorial/14.png" border="0"></div><br><br>				 
+				 
+				 Remenber change <b>your_bam_file.bam</b> with the name of your BAM file. This will generate you a large file called <b>cover.txt</b> with te coverage of your data. Finally, execute <b>cover2tiling</b> with the next options:<br><br>
+				 
+				 <div align="center"><img src="img/tutorial/15.png" border="0"></div><br><br>	
+				 
+				 Where:
+				 
+				 <ul>
+				 	<li><b>cover.txt</b> is the output file of samtools mpileup comand.</li>
+				 	<li><b>output.txt</b> is the output file to be used in TilingScan.</li>
+				 	<li><b>N</b> is the average nucleotides for each hit. You must change it with an odd number.</li>
+				 </ul>
+				 
+				 Now you can use the output file generated into <b>TilingScan</b>.<br><br>
+				 
+				 
+				 For further information, please read the complete manual of <b>Cover2Tiling</b>, available <a href="https://github.com/TilingScan/cover2tiling/blob/master/README.md" target="_blank">here</a>.<br><br>
+				
+				<div class="tutorial-close"  onclick="AbrirCerrar('8');">Close</div>
+			</div>
 			
 			<!-- Espacios -->
 			<br><br>
