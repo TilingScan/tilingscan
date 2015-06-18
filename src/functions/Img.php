@@ -433,14 +433,16 @@
 		$f_x = _IMG_ANC_MARGEN + $j + $img_zoom;
 		$o_y = _IMG_ALT_TITULO + $chr[3][$i];
 		$f_y = _IMG_ALT_TITULO + $chr[3][$i + 1];
-		imageline($img, $o_x, $o_y, $f_x, $f_y, $rojo);
+		//imageline($img, $o_x, $o_y, $f_x, $f_y, $rojo);
+		ImgBoldLine($img, $o_x, $o_y, $f_x, $f_y, $rojo);
 	
 		//Pintamos la recta del Forward
 		$o_x = _IMG_ANC_MARGEN + $j;
 		$f_x = _IMG_ANC_MARGEN + $j + $img_zoom;
 		$o_y = _IMG_ALT_TITULO + $chr[1][$i];
 		$f_y = _IMG_ALT_TITULO + $chr[1][$i + 1];
-		imageline($img, $o_x, $o_y, $f_x, $f_y, $azul);
+		//imageline($img, $o_x, $o_y, $f_x, $f_y, $azul);
+		ImgBoldLine($img, $o_x, $o_y, $f_x, $f_y, $azul);
 		
 		//Devolvemos la imageen
 		return $img;
@@ -868,7 +870,7 @@
 	}
 	
 	//Funcion que pinta una linea con una anchura determinada
-	function ImgBoldLine($resource, $x1, $y1, $x2, $y2, $Color, $BoldNess=2, $func='imageLine')
+	function ImgBoldLine($resource, $x1, $y1, $x2, $y2, $Color, $BoldNess=2, $func='imageline')
 	{
 		$center = round($BoldNess/2);
 		for($i=0;$i<$BoldNess;$i++)
