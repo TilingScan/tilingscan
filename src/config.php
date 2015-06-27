@@ -65,6 +65,6 @@
 	$p_strand = true;
 	
 	//Localizacion de Annotate
-	define('_ANNOTATE_URL', 'http://annotateapp.github.io/app.html');
+	define('_ANNOTATE_URL', 'http://bioinfo.jmjuanes.es/annotate/app.html');
 	
 ?>
