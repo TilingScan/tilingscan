@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=980, user-scalable=no">
 
 <!-- Hojas de estilos -->
-<link rel="stylesheet" type="text/css" href="https://jmassets.github.io/fonts/opensans.css">
+<link rel="stylesheet" type="text/css" href="https://jmjuanes.github.io/fonts/opensans.css">
 <link rel="stylesheet" type="text/css" href="./css/style.css">
 
 <!-- Favicon -->
