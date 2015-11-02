@@ -16,7 +16,7 @@ If you have problems with the installation, please read the [Installation guide]
 
 ## Support
 
-If you have a technical problem with **TilingScan**, please contact with Jose M. in [www.jmjuanes.es](http://www.jmjuanes.es).
+If you have a technical problem with **TilingScan**, please contact with Jose M. in [jm.juanes.xyz](http://jm.juanes.xyz).
 
 
 ## License
